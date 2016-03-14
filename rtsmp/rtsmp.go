@@ -18,13 +18,19 @@ func Start(configFile string) error {
 	if err != nil {
 		return err
 	}
-
-
 }
 
-func startServer(addr string) error {
+// Load all servers from config
+func startServer(handler bool, addr string) error {
 	item, err := net.Listen("tcp", addr)
 	if err != nil {
 		return err
+	}
+
+	if handler {
+		item, err := http.ListenAndServe(":8080", nil)
+		if err != nil {
+			return err
+		}
 	}
 }
