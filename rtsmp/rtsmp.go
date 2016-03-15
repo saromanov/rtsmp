@@ -33,4 +33,6 @@ func startServer(handler bool, addr string) error {
 			return err
 		}
 	}
+
+	return nil
 }
