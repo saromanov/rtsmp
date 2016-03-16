@@ -5,7 +5,7 @@ import (
 )
 
 type Config struct {
-
+	Name string
 }
 
 func loadConfig(path string)(map[string]interface{}, error) {
