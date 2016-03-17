@@ -28,7 +28,7 @@ func startServer(handler bool, addr string) error {
 	}
 
 	if handler {
-		item, err := http.ListenAndServe(":8080", nil)
+		item, err := http.ListenAndServe(addr, nil)
 		if err != nil {
 			return err
 		}
