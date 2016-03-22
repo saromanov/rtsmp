@@ -7,7 +7,7 @@ import (
     "bufio"
 )
 
-
+// setTLS provides optional parameter 
 func setTLS(addr, pem, key string) {
 	log.SetFlags(log.Lshortfile)
 
